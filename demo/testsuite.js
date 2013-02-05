@@ -1,15 +1,5 @@
 var fs = require('fs');
 
-// CasperJS library
-phantom.casperPath = 'CasperJs';
-phantom.injectJs(phantom.casperPath + '/bin/bootstrap.js');
-phantom.injectJs('jquery.js');
-
-// Populate global variables
-var casper = require('casper').create({
-	viewportSize: {width: 1027, height: 800}
-});
-
 var css = require('./phantomcss.js');
 var url = initPageOnServer('demo/testpage.html');
 
